@@ -10,4 +10,12 @@
 
 @interface LOLContactFormViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet UITextField *siteField;
+
+- (IBAction)createContact:(id)sender;
+
 @end
