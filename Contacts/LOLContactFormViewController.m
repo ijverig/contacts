@@ -37,5 +37,12 @@
 
 - (IBAction)createContact:(id)sender
 {
+    NSMutableDictionary *data = [NSMutableDictionary new];
+    [data setObject:self.nameField.text forKey:@"name"];
+    [data setObject:self.emailField.text forKey:@"email"];
+    [data setObject:self.addressField.text forKey:@"address"];
+    [data setObject:self.phoneField.text forKey:@"phone"];
+    [data setObject:self.siteField.text forKey:@"site"];
+    NSLog(@"Data %@", data);
 }
 @end
