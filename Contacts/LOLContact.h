@@ -10,10 +10,10 @@
 
 @interface LOLContact : NSObject
 
-@property NSString *name;
-@property NSString *email;
-@property NSString *address;
-@property NSString *phone;
-@property NSString *site;
+@property (strong) NSString *name;
+@property (strong) NSString *email;
+@property (strong) NSString *address;
+@property (strong) NSString *phone;
+@property (strong) NSString *site;
 
 @end
