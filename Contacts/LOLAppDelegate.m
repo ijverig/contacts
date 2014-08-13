@@ -7,7 +7,7 @@
 //
 
 #import "LOLAppDelegate.h"
-#import "LOLContactFormViewController.h"
+#import "LOLContactsListViewController.h"
 
 @implementation LOLAppDelegate
 
@@ -15,10 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    LOLContactFormViewController *from = [LOLContactFormViewController new];
-    self.window.rootViewController = from;
-    
     // Override point for customization after application launch.
+    LOLContactsListViewController *listView = [LOLContactsListViewController new];
+    self.window.rootViewController = listView;
+    
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
