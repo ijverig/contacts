@@ -21,6 +21,7 @@
 		8CF39A66199ACCA200603EF4 /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF39A65199ACCA200603EF4 /* ContactsTests.m */; };
 		8CF39A72199ACF8100603EF4 /* LOLContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF39A70199ACF8100603EF4 /* LOLContactFormViewController.m */; };
 		8CF39A73199ACF8100603EF4 /* LOLContactFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */; };
+		8CF39A76199AE29B00603EF4 /* LOLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF39A75199AE29B00603EF4 /* LOLContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8CF39A6F199ACF8100603EF4 /* LOLContactFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactFormViewController.h; sourceTree = "<group>"; };
 		8CF39A70199ACF8100603EF4 /* LOLContactFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactFormViewController.m; sourceTree = "<group>"; };
 		8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactFormViewController.xib; sourceTree = "<group>"; };
+		8CF39A74199AE29B00603EF4 /* LOLContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContact.h; sourceTree = "<group>"; };
+		8CF39A75199AE29B00603EF4 /* LOLContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 			children = (
 				8CF39A6F199ACF8100603EF4 /* LOLContactFormViewController.h */,
 				8CF39A70199ACF8100603EF4 /* LOLContactFormViewController.m */,
+				8CF39A74199AE29B00603EF4 /* LOLContact.h */,
+				8CF39A75199AE29B00603EF4 /* LOLContact.m */,
 				8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */,
 				8CF39A4F199ACCA200603EF4 /* LOLAppDelegate.h */,
 				8CF39A50199ACCA200603EF4 /* LOLAppDelegate.m */,
@@ -251,6 +256,7 @@
 			files = (
 				8CF39A72199ACF8100603EF4 /* LOLContactFormViewController.m in Sources */,
 				8CF39A51199ACCA200603EF4 /* LOLAppDelegate.m in Sources */,
+				8CF39A76199AE29B00603EF4 /* LOLContact.m in Sources */,
 				8CF39A4D199ACCA200603EF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

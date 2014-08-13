@@ -7,6 +7,7 @@
 //
 
 #import "LOLContactFormViewController.h"
+#import "LOLContact.h"
 
 @interface LOLContactFormViewController ()
 
@@ -37,12 +38,12 @@
 
 - (IBAction)createContact:(id)sender
 {
-    NSMutableDictionary *data = [NSMutableDictionary new];
-    [data setObject:self.nameField.text forKey:@"name"];
-    [data setObject:self.emailField.text forKey:@"email"];
-    [data setObject:self.addressField.text forKey:@"address"];
-    [data setObject:self.phoneField.text forKey:@"phone"];
-    [data setObject:self.siteField.text forKey:@"site"];
-    NSLog(@"Data %@", data);
+    LOLContact *contact = [LOLContact new];
+    contact.name = self.nameField.text;
+    contact.email = self.emailField.text;
+    contact.address = self.addressField.text;
+    contact.phone = self.phoneField.text;
+    contact.site = self.siteField.text;
+    NSLog(@"Data: %@", contact);
 }
 @end
