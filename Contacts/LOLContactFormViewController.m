@@ -54,8 +54,8 @@
     contact.phone = self.phoneField.text;
     contact.site = self.siteField.text;
     
-    NSLog(@"Data: %@", contact);
-    
     [self.contacts addObject:contact];
+    
+    NSLog(@"Actual contacts: %@", self.contacts);
 }
 @end
