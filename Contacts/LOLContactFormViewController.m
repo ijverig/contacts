@@ -15,6 +15,15 @@
 
 @implementation LOLContactFormViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.contacts = [NSMutableArray new];
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,6 +53,9 @@
     contact.address = self.addressField.text;
     contact.phone = self.phoneField.text;
     contact.site = self.siteField.text;
+    
     NSLog(@"Data: %@", contact);
+    
+    [self.contacts addObject:contact];
 }
 @end
