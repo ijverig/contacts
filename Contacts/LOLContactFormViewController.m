@@ -20,6 +20,9 @@
     self = [super init];
     if (self) {
         self.contacts = [NSMutableArray new];
+        
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(createContact)];
+        self.navigationItem.rightBarButtonItem = addButton;
     }
     return self;
 }
@@ -45,7 +48,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)createContact:(id)sender
+- (void)createContact
+{
+    [self.contacts addObject:[self fetchDataFromForm]];
+    
+    NSLog(@"Actual contacts: %@", self.contacts);
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (LOLContact *)fetchDataFromForm
 {
     LOLContact *contact = [LOLContact new];
     contact.name = self.nameField.text;
@@ -54,10 +67,7 @@
     contact.phone = self.phoneField.text;
     contact.site = self.siteField.text;
     
-    [self.contacts addObject:contact];
-    
-    NSLog(@"Actual contacts: %@", self.contacts);
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    return contact;
 }
+
 @end

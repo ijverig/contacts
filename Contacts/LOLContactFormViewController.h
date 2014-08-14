@@ -19,6 +19,4 @@
 
 @property (strong) NSMutableArray *contacts;
 
-- (IBAction)createContact:(id)sender;
-
 @end
