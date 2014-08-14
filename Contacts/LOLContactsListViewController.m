@@ -7,7 +7,25 @@
 //
 
 #import "LOLContactsListViewController.h"
+#import "LOLContactFormViewController.h"
 
 @implementation LOLContactsListViewController
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.navigationItem.title = @"Contacts";
+        UIBarButtonItem *createContactButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showContactForm)];
+        self.navigationItem.rightBarButtonItem = createContactButton;
+    }
+    return self;
+}
+
+- (void)showContactForm
+{
+    LOLContactFormViewController *form = [LOLContactFormViewController new];
+    [self presentViewController:form animated:YES completion:nil];
+}
 
 @end

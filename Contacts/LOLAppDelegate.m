@@ -17,7 +17,8 @@
     
     // Override point for customization after application launch.
     LOLContactsListViewController *listView = [LOLContactsListViewController new];
-    self.window.rootViewController = listView;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listView];
+    self.window.rootViewController = nav;
     
 
     self.window.backgroundColor = [UIColor whiteColor];
