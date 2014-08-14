@@ -50,8 +50,6 @@
 {
     [self.contacts addObject:[self fetchDataFromForm]];
     
-    NSLog(@"Actual contacts: %@", self.contacts);
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
