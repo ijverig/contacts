@@ -24,12 +24,39 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.tableView reloadData];
+    
     NSString *message = [NSString stringWithFormat:@"Number of items: %lu", (unsigned long)[self.contacts count]];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"List" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
     [alert show];
-    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.contacts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+
+    LOLContact *contact = self.contacts[indexPath.row];
+
+    cell.textLabel.text = contact.name;
+
+    return cell;
 }
 
 - (void)showContactForm
