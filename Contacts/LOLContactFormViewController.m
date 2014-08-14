@@ -61,6 +61,7 @@
 - (LOLContact *)fetchDataFromForm
 {
     LOLContact *contact = [LOLContact new];
+    
     contact.name = self.nameField.text;
     contact.email = self.emailField.text;
     contact.address = self.addressField.text;
