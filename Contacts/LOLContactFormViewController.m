@@ -57,5 +57,7 @@
     [self.contacts addObject:contact];
     
     NSLog(@"Actual contacts: %@", self.contacts);
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
