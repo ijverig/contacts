@@ -22,6 +22,16 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSString *message = [NSString stringWithFormat:@"Number of items: %d", [self.contacts count]];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"List" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    [alert show];
+    
+}
+
 - (void)showContactForm
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];
