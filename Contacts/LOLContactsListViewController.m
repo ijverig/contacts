@@ -25,12 +25,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
-    
-    NSString *message = [NSString stringWithFormat:@"Number of items: %lu", (unsigned long)[self.contacts count]];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"List" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    
-    [alert show];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
