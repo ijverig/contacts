@@ -2,7 +2,7 @@
 //  LOLAppDelegate.h
 //  Contacts
 //
-//  Created by ios4609 on 12/08/14.
+//  Created by Rafael França on 12/08/14.
 //  Copyright (c) 2014 Rafael França. All rights reserved.
 //
 
