@@ -25,7 +25,7 @@
 - (void)showContactForm
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];
-    [self presentViewController:form animated:YES completion:nil];
+    [self.navigationController pushViewController:form animated:YES];
 }
 
 @end
