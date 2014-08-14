@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UITextField *siteField;
 
-@property (strong) NSMutableArray *contacts;
+@property (weak, nonatomic) NSMutableArray *contacts;
 
 @end

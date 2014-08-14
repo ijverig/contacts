@@ -19,8 +19,6 @@
 {
     self = [super init];
     if (self) {
-        self.contacts = [NSMutableArray new];
-        
         UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(createContact)];
         self.navigationItem.rightBarButtonItem = addButton;
     }

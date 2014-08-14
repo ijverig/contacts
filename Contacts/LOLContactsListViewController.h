@@ -10,4 +10,6 @@
 
 @interface LOLContactsListViewController : UITableViewController
 
+@property (weak, nonatomic) NSMutableArray *contacts;
+
 @end

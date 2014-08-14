@@ -16,7 +16,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
+    self.contacts = [NSMutableArray new];
+    
     LOLContactsListViewController *listView = [LOLContactsListViewController new];
+    listView.contacts = self.contacts;
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listView];
     self.window.rootViewController = nav;
     
