@@ -64,6 +64,16 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LOLContact *contact = self.contacts[indexPath.row];
+    
+    LOLContactFormViewController *form = [[LOLContactFormViewController alloc] initWithContact:contact];
+    form.contacts = self.contacts;
+    
+    [self.navigationController pushViewController:form animated:YES];
+}
+
 - (void)showContactForm
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];

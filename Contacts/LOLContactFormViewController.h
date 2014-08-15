@@ -18,5 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *siteField;
 
 @property (weak, nonatomic) NSMutableArray *contacts;
+@property (strong) LOLContact *contact;
+
+- (id) initWithContact:(LOLContact *)contact;
 
 @end

@@ -34,10 +34,26 @@
     return self;
 }
 
+- (id)initWithContact:(LOLContact *)contact
+{
+    self = [super init];
+    if (self) {
+        self.contact = contact;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if (self.contact) {
+        self.nameField.text = self.contact.name;
+        self.emailField.text = self.contact.email;
+        self.addressField.text = self.contact.address;
+        self.phoneField.text = self.contact.phone;
+        self.siteField.text = self.contact.site;
+    }
 }
 
 - (void)didReceiveMemoryWarning
