@@ -16,8 +16,11 @@
     self = [super init];
     if (self) {
         self.navigationItem.title = @"Contacts";
+        
         UIBarButtonItem *createContactButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showContactForm)];
         self.navigationItem.rightBarButtonItem = createContactButton;
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
