@@ -56,6 +56,14 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contacts removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
+
 - (void)showContactForm
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];
