@@ -60,7 +60,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.contacts removeObjectAtIndex:indexPath.row];
-        [tableView reloadData];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:YES];
     }
 }
 
