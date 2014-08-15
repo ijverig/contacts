@@ -18,4 +18,26 @@
     return data;
 }
 
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.email forKey:@"email"];
+    [aCoder encodeObject:self.address forKey:@"address"];
+    [aCoder encodeObject:self.phone forKey:@"phone"];
+    [aCoder encodeObject:self.site forKey:@"site"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (self) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.email = [aDecoder decodeObjectForKey:@"email"];
+        self.address = [aDecoder decodeObjectForKey:@"address"];
+        self.phone = [aDecoder decodeObjectForKey:@"phone"];
+        self.site = [aDecoder decodeObjectForKey:@"site"];
+    }
+    return self;
+}
+
 @end

@@ -16,14 +16,21 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    self.contacts = [NSMutableArray new];
+    NSArray *userDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *dir = userDirs[0];
+    self.file = [NSString stringWithFormat:@"%@/contacts_file", dir];
+    
+    self.contacts = [NSKeyedUnarchiver unarchiveObjectWithFile:self.file];
+
+    if (!self.contacts) {
+        self.contacts = [NSMutableArray new];
+    }
     
     LOLContactsListViewController *listView = [LOLContactsListViewController new];
     listView.contacts = self.contacts;
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listView];
     self.window.rootViewController = nav;
-    
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -40,6 +47,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [NSKeyedArchiver archiveRootObject:self.contacts toFile:self.file];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong) NSMutableArray *contacts;
+@property (strong) NSString *file;
 
 @end

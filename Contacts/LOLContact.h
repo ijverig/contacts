@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LOLContact : NSObject
+@interface LOLContact : NSObject <NSCoding>
 
 @property (strong) NSString *name;
 @property (strong) NSString *email;
