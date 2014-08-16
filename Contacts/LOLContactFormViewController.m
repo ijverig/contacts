@@ -39,6 +39,9 @@
     self = [super init];
     if (self) {
         self.contact = contact;
+        
+        UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(updateContact)];
+        self.navigationItem.rightBarButtonItem = saveButton;
     }
     return self;
 }
@@ -64,23 +67,32 @@
 
 - (void)createContact
 {
-    [self.contacts addObject:[self fetchDataFromForm]];
+    [self fetchDataFromForm];
+    
+    [self.contacts addObject:self.contact];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)updateContact {
+    [self fetchDataFromForm];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 
-- (LOLContact *)fetchDataFromForm
+- (void)fetchDataFromForm
 {
-    LOLContact *contact = [LOLContact new];
+    if (!self.contact) {
+        self.contact = [LOLContact new];
+    }
     
-    contact.name = self.nameField.text;
-    contact.email = self.emailField.text;
-    contact.address = self.addressField.text;
-    contact.phone = self.phoneField.text;
-    contact.site = self.siteField.text;
-    
-    return contact;
+    self.contact.name = self.nameField.text;
+    self.contact.email = self.emailField.text;
+    self.contact.address = self.addressField.text;
+    self.contact.phone = self.phoneField.text;
+    self.contact.site = self.siteField.text;
 }
+
 
 @end
