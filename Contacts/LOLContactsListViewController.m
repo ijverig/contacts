@@ -15,6 +15,7 @@
 {
     self = [super init];
     if (self) {
+        self.selectedLine = -1;
         self.navigationItem.title = @"Contacts";
         
         UIBarButtonItem *createContactButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showContactForm)];
@@ -28,6 +29,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.selectedLine >= 0) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.selectedLine inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        
+        self.selectedLine = -1;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -85,11 +97,12 @@
 - (void)contactAdded:(LOLContact *)contact
 {
     [self.contacts addObject:contact];
+    self.selectedLine = [self.contacts indexOfObject:contact];
 }
 
 - (void)contactUpdated:(LOLContact *)contact
 {
-    
+    self.selectedLine = [self.contacts indexOfObject:contact];
 }
 
 @end

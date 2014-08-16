@@ -12,5 +12,6 @@
 @interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate>
 
 @property (weak, nonatomic) NSMutableArray *contacts;
+@property NSInteger selectedLine;
 
 @end
