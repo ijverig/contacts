@@ -60,6 +60,7 @@
 		8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactFormViewController.xib; sourceTree = "<group>"; };
 		8CF39A74199AE29B00603EF4 /* LOLContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContact.h; sourceTree = "<group>"; };
 		8CF39A75199AE29B00603EF4 /* LOLContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContact.m; sourceTree = "<group>"; };
+		8CFFA0CE199EE1BF00849BE7 /* LOLContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
 		A80D3D21EAC14E4B92505416 /* libPods-Contacts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Contacts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72D8672A9D647D292C0E6DE /* Pods-Contacts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.xcconfig"; path = "Pods/Pods-Contacts.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +129,7 @@
 				8CF39A70199ACF8100603EF4 /* LOLContactFormViewController.m */,
 				8CB36D6B199C2033005804C4 /* LOLContactsListViewController.h */,
 				8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */,
+				8CFFA0CE199EE1BF00849BE7 /* LOLContactFormViewControllerDelegate.h */,
 				8CF39A74199AE29B00603EF4 /* LOLContact.h */,
 				8CF39A75199AE29B00603EF4 /* LOLContact.m */,
 				8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LOLContact.h"
+#import "LOLContactFormViewControllerDelegate.h"
 
 @interface LOLContactFormViewController : UIViewController
 
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UITextField *siteField;
 
-@property (weak, nonatomic) NSMutableArray *contacts;
+@property (strong) id<LOLContactFormViewControllerDelegate> delegate;
 @property (strong) LOLContact *contact;
 
 - (id) initWithContact:(LOLContact *)contact;

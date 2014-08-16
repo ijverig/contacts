@@ -69,7 +69,9 @@
 {
     [self fetchDataFromForm];
     
-    [self.contacts addObject:self.contact];
+    if (self.delegate) {
+        [self.delegate contactAdded:self.contact];
+    }
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -77,6 +79,10 @@
 - (void)updateContact {
     [self fetchDataFromForm];
     
+    if (self.delegate) {
+        [self.delegate contactUpdated:self.contact];
+    }
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -93,6 +99,5 @@
     self.contact.phone = self.phoneField.text;
     self.contact.site = self.siteField.text;
 }
-
 
 @end

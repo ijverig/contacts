@@ -69,7 +69,7 @@
     LOLContact *contact = self.contacts[indexPath.row];
     
     LOLContactFormViewController *form = [[LOLContactFormViewController alloc] initWithContact:contact];
-    form.contacts = self.contacts;
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
 }
@@ -77,9 +77,19 @@
 - (void)showContactForm
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];
-    form.contacts = self.contacts;
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
+}
+
+- (void)contactAdded:(LOLContact *)contact
+{
+    [self.contacts addObject:contact];
+}
+
+- (void)contactUpdated:(LOLContact *)contact
+{
+    
 }
 
 @end

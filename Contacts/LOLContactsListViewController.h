@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LOLContactFormViewControllerDelegate.h"
 
-@interface LOLContactsListViewController : UITableViewController
+@interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate>
 
 @property (weak, nonatomic) NSMutableArray *contacts;
 
