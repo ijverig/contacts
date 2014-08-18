@@ -42,6 +42,12 @@
     }
 }
 
+- (void)viewDidLoad
+{
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showMoreActions:)];
+    [self.tableView addGestureRecognizer:longPress];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -103,6 +109,18 @@
 - (void)contactUpdated:(LOLContact *)contact
 {
     self.selectedLine = [self.contacts indexOfObject:contact];
+}
+
+-(void)showMoreActions:(UIGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint point = [gesture locationInView:self.tableView];
+        NSIndexPath *index_path = [self.tableView indexPathForRowAtPoint:point];
+        self.selectedContact = self.contacts[index_path.row];
+        
+        UIActionSheet *options = [[UIActionSheet alloc] initWithTitle:self.selectedContact.name delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send email", @"Open site", @"Open map", nil];
+        [options showInView:self.view];
+    }
 }
 
 @end

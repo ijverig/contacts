@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) NSMutableArray *contacts;
 @property NSInteger selectedLine;
+@property (strong) LOLContact *selectedContact;
 
 @end
