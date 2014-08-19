@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MFMailComposeViewController.h>
 #import "LOLContactFormViewControllerDelegate.h"
 
-@interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate, UIActionSheetDelegate>
+@interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) NSMutableArray *contacts;
 @property NSInteger selectedLine;

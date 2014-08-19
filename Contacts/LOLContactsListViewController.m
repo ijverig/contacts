@@ -130,7 +130,7 @@
             [self call];
             break;
         case 1:
-            //[self sendEmail];
+            [self sendEmail];
             break;
         case 2:
             [self openSite];
@@ -155,11 +155,25 @@
     }
 }
 
--(void)openSite {
+-(void)sendEmail
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *sender = [MFMailComposeViewController new];
+        [sender setToRecipients:@[self.selectedContact.email]];
+        sender.mailComposeDelegate = self;
+        [self presentViewController:sender animated:YES completion:nil];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"It is not possible send email" message:@"There is no email account configured" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+    }
+}
+
+-(void)openSite
+{
     [self openApplicationWithURL:self.selectedContact.site];
 }
 
--(void)openMap {
+-(void)openMap
+{
     NSString *url = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", self.selectedContact.address] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openApplicationWithURL:url];
 }
@@ -167,6 +181,11 @@
 -(void)openApplicationWithURL:(NSString *)url
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

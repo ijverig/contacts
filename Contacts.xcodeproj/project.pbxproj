@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8CB36D6D199C2033005804C4 /* LOLContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */; };
+		8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC4ACB019A2D46500D70ABE /* MessageUI.framework */; };
 		8CF39A41199ACCA200603EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A40199ACCA200603EF4 /* Foundation.framework */; };
 		8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */; };
 		8CF39A45199ACCA200603EF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A44199ACCA200603EF4 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		8CB36D6B199C2033005804C4 /* LOLContactsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactsListViewController.h; sourceTree = "<group>"; };
 		8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactsListViewController.m; sourceTree = "<group>"; };
+		8CC4ACB019A2D46500D70ABE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CF39A3D199ACCA200603EF4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF39A40199ACCA200603EF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */,
 				8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */,
 				8CF39A45199ACCA200603EF4 /* UIKit.framework in Frameworks */,
 				8CF39A41199ACCA200603EF4 /* Foundation.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		8CF39A3F199ACCA200603EF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CC4ACB019A2D46500D70ABE /* MessageUI.framework */,
 				8CF39A40199ACCA200603EF4 /* Foundation.framework */,
 				8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */,
 				8CF39A44199ACCA200603EF4 /* UIKit.framework */,
