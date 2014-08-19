@@ -136,7 +136,7 @@
             [self openSite];
             break;
         case 3:
-            //[self openMap];
+            [self openMap];
             break;
         default:
             break;
@@ -157,6 +157,11 @@
 
 -(void)openSite {
     [self openApplicationWithURL:self.selectedContact.site];
+}
+
+-(void)openMap {
+    NSString *url = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", self.selectedContact.address] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self openApplicationWithURL:url];
 }
 
 -(void)openApplicationWithURL:(NSString *)url
