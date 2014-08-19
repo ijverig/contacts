@@ -133,7 +133,7 @@
             //[self sendEmail];
             break;
         case 2:
-            //[self openSite];
+            [self openSite];
             break;
         case 3:
             //[self openMap];
@@ -153,6 +153,10 @@
     } else {
         [[[UIAlertView alloc] initWithTitle:@"It is not possible to make a call" message:@"This device is not an iPhone" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
     }
+}
+
+-(void)openSite {
+    [self openApplicationWithURL:self.selectedContact.site];
 }
 
 -(void)openApplicationWithURL:(NSString *)url
