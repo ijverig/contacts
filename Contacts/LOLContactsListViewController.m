@@ -118,9 +118,46 @@
         NSIndexPath *index_path = [self.tableView indexPathForRowAtPoint:point];
         self.selectedContact = self.contacts[index_path.row];
         
-        UIActionSheet *options = [[UIActionSheet alloc] initWithTitle:self.selectedContact.name delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send email", @"Open site", @"Open map", nil];
+        UIActionSheet *options = [[UIActionSheet alloc] initWithTitle:self.selectedContact.name delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send email", @"Open site", @"Open map", nil];
         [options showInView:self.view];
     }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self call];
+            break;
+        case 1:
+            //[self sendEmail];
+            break;
+        case 2:
+            //[self openSite];
+            break;
+        case 3:
+            //[self openMap];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)call
+{
+    UIDevice *device = [UIDevice currentDevice];
+    
+    if ([device.model isEqualToString:@"iPhone"]) {
+        NSString *number = [NSString stringWithFormat:@"tel:%@", self.selectedContact.phone];
+        [self openApplicationWithURL:number];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"It is not possible to make a call" message:@"This device is not an iPhone" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+    }
+}
+
+-(void)openApplicationWithURL:(NSString *)url
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 @end

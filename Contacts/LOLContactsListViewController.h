@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LOLContactFormViewControllerDelegate.h"
 
-@interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate>
+@interface LOLContactsListViewController : UITableViewController <LOLContactFormViewControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) NSMutableArray *contacts;
 @property NSInteger selectedLine;
