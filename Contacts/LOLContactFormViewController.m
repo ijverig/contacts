@@ -58,7 +58,7 @@
         self.siteField.text = self.contact.site;
         if (self.contact.photo) {
             [self.photoField setBackgroundImage:self.contact.photo forState:UIControlStateNormal];
-        [   self.photoField setTitle:@"" forState:UIControlStateNormal];
+        [self.photoField setTitle:@"" forState:UIControlStateNormal];
         }
     }
 }
