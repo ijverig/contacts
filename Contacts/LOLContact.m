@@ -25,6 +25,7 @@
     [aCoder encodeObject:self.address forKey:@"address"];
     [aCoder encodeObject:self.phone forKey:@"phone"];
     [aCoder encodeObject:self.site forKey:@"site"];
+    [aCoder encodeObject:self.photo forKey:@"photo"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -36,6 +37,7 @@
         self.address = [aDecoder decodeObjectForKey:@"address"];
         self.phone = [aDecoder decodeObjectForKey:@"phone"];
         self.site = [aDecoder decodeObjectForKey:@"site"];
+        self.photo = [aDecoder decodeObjectForKey:@"photo"];
     }
     return self;
 }

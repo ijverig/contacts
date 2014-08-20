@@ -56,6 +56,10 @@
         self.addressField.text = self.contact.address;
         self.phoneField.text = self.contact.phone;
         self.siteField.text = self.contact.site;
+        if (self.contact.photo) {
+            [self.photoField setBackgroundImage:self.contact.photo forState:UIControlStateNormal];
+        [   self.photoField setTitle:@"" forState:UIControlStateNormal];
+        }
     }
 }
 
@@ -98,6 +102,28 @@
     self.contact.address = self.addressField.text;
     self.contact.phone = self.phoneField.text;
     self.contact.site = self.siteField.text;
+    self.contact.photo = [self.photoField backgroundImageForState:UIControlStateNormal];
+}
+
+- (IBAction)selectPhoto:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    [self.photoField setBackgroundImage:image forState:UIControlStateNormal];
+    [self.photoField setTitle:@"" forState:UIControlStateNormal];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

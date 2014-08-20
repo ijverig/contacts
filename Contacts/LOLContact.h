@@ -15,5 +15,6 @@
 @property (strong) NSString *address;
 @property (strong) NSString *phone;
 @property (strong) NSString *site;
+@property (strong) UIImage *photo;
 
 @end
