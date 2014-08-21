@@ -30,12 +30,16 @@
     LOLContactsListViewController *listView = [LOLContactsListViewController new];
     listView.contacts = self.contacts;
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listView];
-    self.window.rootViewController = nav;
+    UINavigationController *listNav = [[UINavigationController alloc] initWithRootViewController:listView];
+    self.window.rootViewController = listNav;
     
     LOLContactOnMapViewController *map = [LOLContactOnMapViewController new];
+    
+    UINavigationController *mapNav = [[UINavigationController alloc] initWithRootViewController:map];
+    self.window.rootViewController = mapNav;
+    
     UITabBarController *tabs = [UITabBarController new];
-    tabs.viewControllers = @[nav, map];
+    tabs.viewControllers = @[listNav, mapNav];
     
     self.window.rootViewController = tabs;
 
