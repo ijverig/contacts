@@ -22,6 +22,10 @@
         self.navigationItem.rightBarButtonItem = createContactButton;
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
+        UIImage *img = [UIImage imageNamed:@"lista_contatos"];
+        UITabBarItem *tbi = [[UITabBarItem alloc] initWithTitle:@"Contacts" image:img tag:0];
+        self.tabBarItem = tbi;
     }
     return self;
 }

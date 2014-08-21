@@ -14,6 +14,17 @@
 
 @implementation LOLContactOnMapViewController
 
+-(id)init
+{
+    self = [super init];
+    if (self) {
+        UIImage *img = [UIImage imageNamed:@"mapa_contatos"];
+        UITabBarItem *tbi = [[UITabBarItem alloc] initWithTitle:@"Maps" image:img tag:0];
+        self.tabBarItem = tbi;
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

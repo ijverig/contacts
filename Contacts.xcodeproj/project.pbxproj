@@ -11,6 +11,7 @@
 		8CBA8F2019A5696B0056C5DD /* LOLContactOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */; };
 		8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */; };
 		8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBA8F2219A56A1D0056C5DD /* MapKit.framework */; };
+		8CBA8F2619A56F380056C5DD /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA8F2519A56F380056C5DD /* Vila Mariana.gpx */; };
 		8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC4ACB019A2D46500D70ABE /* MessageUI.framework */; };
 		8CF39A41199ACCA200603EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A40199ACCA200603EF4 /* Foundation.framework */; };
 		8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */; };
@@ -47,6 +48,7 @@
 		8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactOnMapViewController.m; sourceTree = "<group>"; };
 		8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactOnMapViewController.xib; sourceTree = "<group>"; };
 		8CBA8F2219A56A1D0056C5DD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8CBA8F2519A56F380056C5DD /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		8CC4ACB019A2D46500D70ABE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CF39A3D199ACCA200603EF4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF39A40199ACCA200603EF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,7 @@
 		8CF39A47199ACCA200603EF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CBA8F2519A56F380056C5DD /* Vila Mariana.gpx */,
 				8CF39A48199ACCA200603EF4 /* Contacts-Info.plist */,
 				8CF39A49199ACCA200603EF4 /* InfoPlist.strings */,
 				8CF39A4C199ACCA200603EF4 /* main.m */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF39A4B199ACCA200603EF4 /* InfoPlist.strings in Resources */,
+				8CBA8F2619A56F380056C5DD /* Vila Mariana.gpx in Resources */,
 				8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */,
 				8CF39A53199ACCA200603EF4 /* Images.xcassets in Resources */,
 				8CF39A73199ACF8100603EF4 /* LOLContactFormViewController.xib in Resources */,
