@@ -8,6 +8,7 @@
 
 #import "LOLAppDelegate.h"
 #import "LOLContactsListViewController.h"
+#import "LOLContactOnMapViewController.h"
 
 @implementation LOLAppDelegate
 
@@ -31,6 +32,13 @@
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listView];
     self.window.rootViewController = nav;
+    
+    LOLContactOnMapViewController *map = [LOLContactOnMapViewController new];
+    UITabBarController *tabs = [UITabBarController new];
+    tabs.viewControllers = @[nav, map];
+    
+    self.window.rootViewController = tabs;
+
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

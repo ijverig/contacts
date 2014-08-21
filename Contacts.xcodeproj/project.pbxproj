@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8CB36D6D199C2033005804C4 /* LOLContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */; };
+		8CBA8F2019A5696B0056C5DD /* LOLContactOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */; };
+		8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */; };
+		8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBA8F2219A56A1D0056C5DD /* MapKit.framework */; };
 		8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC4ACB019A2D46500D70ABE /* MessageUI.framework */; };
 		8CF39A41199ACCA200603EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A40199ACCA200603EF4 /* Foundation.framework */; };
 		8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */; };
@@ -40,6 +43,10 @@
 /* Begin PBXFileReference section */
 		8CB36D6B199C2033005804C4 /* LOLContactsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactsListViewController.h; sourceTree = "<group>"; };
 		8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactsListViewController.m; sourceTree = "<group>"; };
+		8CBA8F1D19A5696B0056C5DD /* LOLContactOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactOnMapViewController.h; sourceTree = "<group>"; };
+		8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactOnMapViewController.m; sourceTree = "<group>"; };
+		8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactOnMapViewController.xib; sourceTree = "<group>"; };
+		8CBA8F2219A56A1D0056C5DD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CC4ACB019A2D46500D70ABE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8CF39A3D199ACCA200603EF4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF39A40199ACCA200603EF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */,
 				8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */,
 				8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */,
 				8CF39A45199ACCA200603EF4 /* UIKit.framework in Frameworks */,
@@ -116,6 +124,7 @@
 		8CF39A3F199ACCA200603EF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CBA8F2219A56A1D0056C5DD /* MapKit.framework */,
 				8CC4ACB019A2D46500D70ABE /* MessageUI.framework */,
 				8CF39A40199ACCA200603EF4 /* Foundation.framework */,
 				8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */,
@@ -137,6 +146,9 @@
 				8CF39A74199AE29B00603EF4 /* LOLContact.h */,
 				8CF39A75199AE29B00603EF4 /* LOLContact.m */,
 				8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */,
+				8CBA8F1D19A5696B0056C5DD /* LOLContactOnMapViewController.h */,
+				8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */,
+				8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */,
 				8CF39A4F199ACCA200603EF4 /* LOLAppDelegate.h */,
 				8CF39A50199ACCA200603EF4 /* LOLAppDelegate.m */,
 				8CF39A52199ACCA200603EF4 /* Images.xcassets */,
@@ -253,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF39A4B199ACCA200603EF4 /* InfoPlist.strings in Resources */,
+				8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */,
 				8CF39A53199ACCA200603EF4 /* Images.xcassets in Resources */,
 				8CF39A73199ACF8100603EF4 /* LOLContactFormViewController.xib in Resources */,
 			);
@@ -307,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF39A72199ACF8100603EF4 /* LOLContactFormViewController.m in Sources */,
+				8CBA8F2019A5696B0056C5DD /* LOLContactOnMapViewController.m in Sources */,
 				8CF39A51199ACCA200603EF4 /* LOLAppDelegate.m in Sources */,
 				8CF39A76199AE29B00603EF4 /* LOLContact.m in Sources */,
 				8CF39A4D199ACCA200603EF4 /* main.m in Sources */,
