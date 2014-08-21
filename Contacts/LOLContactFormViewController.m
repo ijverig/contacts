@@ -56,6 +56,8 @@
         self.addressField.text = self.contact.address;
         self.phoneField.text = self.contact.phone;
         self.siteField.text = self.contact.site;
+        self.latitudeField.text = [self.contact.latitude stringValue];
+        self.longitudeField.text = [self.contact.longitude stringValue];
         if (self.contact.photo) {
             [self.photoField setBackgroundImage:self.contact.photo forState:UIControlStateNormal];
         [self.photoField setTitle:@"" forState:UIControlStateNormal];
@@ -102,6 +104,8 @@
     self.contact.address = self.addressField.text;
     self.contact.phone = self.phoneField.text;
     self.contact.site = self.siteField.text;
+    self.contact.latitude = [NSNumber numberWithDouble:[self.latitudeField.text doubleValue]];
+    self.contact.longitude = [NSNumber numberWithDouble:[self.longitudeField.text doubleValue]];
     self.contact.photo = [self.photoField backgroundImageForState:UIControlStateNormal];
 }
 

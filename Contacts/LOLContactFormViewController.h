@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UITextField *siteField;
 @property (weak, nonatomic) IBOutlet UIButton *photoField;
+@property (weak, nonatomic) IBOutlet UITextField *latitudeField;
+@property (weak, nonatomic) IBOutlet UITextField *longitudeField;
 
 @property (strong) id<LOLContactFormViewControllerDelegate> delegate;
 @property (strong) LOLContact *contact;
