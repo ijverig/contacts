@@ -43,6 +43,16 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.mapView addAnnotations:self.contacts];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self.mapView removeAnnotations:self.contacts];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

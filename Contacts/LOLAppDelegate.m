@@ -34,6 +34,7 @@
     self.window.rootViewController = listNav;
     
     LOLContactOnMapViewController *map = [LOLContactOnMapViewController new];
+    map.contacts = self.contacts;
     
     UINavigationController *mapNav = [[UINavigationController alloc] initWithRootViewController:map];
     self.window.rootViewController = mapNav;
