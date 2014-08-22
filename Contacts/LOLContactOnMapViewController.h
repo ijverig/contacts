@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "LOLContact.h"
 
-@interface LOLContactOnMapViewController : UIViewController
+@interface LOLContactOnMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) NSMutableArray *contacts;

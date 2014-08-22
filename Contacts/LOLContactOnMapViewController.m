@@ -40,7 +40,7 @@
     // Do any additional setup after loading the view from its nib.
     MKUserTrackingBarButtonItem *trackingButton = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
     self.navigationItem.leftBarButtonItem = trackingButton;
-
+    self.mapView.delegate = self;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -57,6 +57,34 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    } else {
+        static NSString *pool = @"annotation";
+        MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:pool];
+
+        if (!pin) {
+            pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pool];
+        } else {
+            pin.annotation = annotation;
+        }
+        
+        pin.pinColor = MKPinAnnotationColorPurple;
+        pin.canShowCallout = YES;
+        LOLContact *contact = (LOLContact *) annotation;
+        
+        if (contact.photo) {
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+            imageView.image = contact.photo;
+            pin.leftCalloutAccessoryView = imageView;
+        }
+        
+        return pin;
+    }
 }
 
 @end
