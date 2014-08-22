@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Rafael França. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "LOLContactFormViewController.h"
 #import "LOLContact.h"
 
@@ -120,6 +121,23 @@
         picker.delegate = self;
         [self presentViewController:picker animated:YES completion:nil];
     }
+}
+
+
+- (IBAction)fetchMapInformation:(id)sender
+{
+    [self.spinner startAnimating];
+    
+    CLGeocoder *geocoder = [CLGeocoder new];
+    [geocoder geocodeAddressString:self.addressField.text completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (!error && [placemarks count] > 0) {
+            CLPlacemark *result = placemarks[0];
+            CLLocationCoordinate2D coordinate = result.location.coordinate;
+            self.latitudeField.text = [NSString stringWithFormat:@"%f", coordinate.latitude];
+            self.longitudeField.text = [NSString stringWithFormat:@"%f", coordinate.longitude];
+        }
+        [self.spinner stopAnimating];
+    }];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

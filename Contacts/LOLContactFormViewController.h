@@ -20,11 +20,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *photoField;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeField;
 @property (weak, nonatomic) IBOutlet UITextField *longitudeField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (strong) id<LOLContactFormViewControllerDelegate> delegate;
 @property (strong) LOLContact *contact;
 
 - (id) initWithContact:(LOLContact *)contact;
 - (IBAction)selectPhoto:(id)sender;
+- (IBAction)fetchMapInformation:(id)sender;
 
 @end
