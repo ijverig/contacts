@@ -21,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
+    [self insertData];
     self.contacts = [self fetchContacts];
     
     LOLContactsListViewController *listView = [LOLContactsListViewController new];
@@ -164,6 +165,28 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void)insertData
+{
+    NSUserDefaults *config = [NSUserDefaults standardUserDefaults];
+    BOOL insertedData = [config boolForKey:@"br.com.caelum.LOLContacts.insertedData"];
+    
+    if (!insertedData) {
+        LOLContact *contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:self.managedObjectContext];
+        contact.name = @"Plataformatec";
+        contact.phone = @"11 23390708";
+        contact.address = @"Rua marilia, 40, São Paulo, Brazil";
+        contact.site = @"http://plataformatec.com.br";
+        contact.email = @"contact@plataformatec.com.br";
+        contact.latitude = [NSNumber numberWithDouble:-23.566594];
+        contact.longitude = [NSNumber numberWithDouble:-46.654026];
+        
+        [self saveContext];
+        
+        [config setBool:YES forKey:@"br.com.caelum.LOLContacts.insertedData"];
+        [config synchronize];
+    }
 }
 
 - (NSMutableArray *)fetchContacts
