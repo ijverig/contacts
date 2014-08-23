@@ -14,6 +14,8 @@
 		8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBA8F2219A56A1D0056C5DD /* MapKit.framework */; };
 		8CBA8F2619A56F380056C5DD /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA8F2519A56F380056C5DD /* Vila Mariana.gpx */; };
 		8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC4ACB019A2D46500D70ABE /* MessageUI.framework */; };
+		8CCA208519A7FFD200E7787D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCA208419A7FFD200E7787D /* CoreData.framework */; };
+		8CCA208819A8022B00E7787D /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA208619A8022B00E7787D /* Contacts.xcdatamodeld */; };
 		8CF39A41199ACCA200603EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A40199ACCA200603EF4 /* Foundation.framework */; };
 		8CF39A43199ACCA200603EF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */; };
 		8CF39A45199ACCA200603EF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF39A44199ACCA200603EF4 /* UIKit.framework */; };
@@ -52,6 +54,8 @@
 		8CBA8F2219A56A1D0056C5DD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8CBA8F2519A56F380056C5DD /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		8CC4ACB019A2D46500D70ABE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8CCA208419A7FFD200E7787D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8CCA208719A8022B00E7787D /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
 		8CF39A3D199ACCA200603EF4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF39A40199ACCA200603EF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CF39A42199ACCA200603EF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCA208519A7FFD200E7787D /* CoreData.framework in Frameworks */,
 				8CB1522719A6C12D003E39C1 /* CoreLocation.framework in Frameworks */,
 				8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */,
 				8CC4ACB119A2D46500D70ABE /* MessageUI.framework in Frameworks */,
@@ -129,6 +134,7 @@
 		8CF39A3F199ACCA200603EF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CCA208419A7FFD200E7787D /* CoreData.framework */,
 				8CB1522619A6C12D003E39C1 /* CoreLocation.framework */,
 				8CBA8F2219A56A1D0056C5DD /* MapKit.framework */,
 				8CC4ACB019A2D46500D70ABE /* MessageUI.framework */,
@@ -151,6 +157,7 @@
 				8CFFA0CE199EE1BF00849BE7 /* LOLContactFormViewControllerDelegate.h */,
 				8CF39A74199AE29B00603EF4 /* LOLContact.h */,
 				8CF39A75199AE29B00603EF4 /* LOLContact.m */,
+				8CCA208619A8022B00E7787D /* Contacts.xcdatamodeld */,
 				8CF39A71199ACF8100603EF4 /* LOLContactFormViewController.xib */,
 				8CBA8F1D19A5696B0056C5DD /* LOLContactOnMapViewController.h */,
 				8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */,
@@ -332,6 +339,7 @@
 				8CF39A51199ACCA200603EF4 /* LOLAppDelegate.m in Sources */,
 				8CF39A76199AE29B00603EF4 /* LOLContact.m in Sources */,
 				8CF39A4D199ACCA200603EF4 /* main.m in Sources */,
+				8CCA208819A8022B00E7787D /* Contacts.xcdatamodeld in Sources */,
 				8CB36D6D199C2033005804C4 /* LOLContactsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8CCA208619A8022B00E7787D /* Contacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8CCA208719A8022B00E7787D /* Contacts.xcdatamodel */,
+			);
+			currentVersion = 8CCA208719A8022B00E7787D /* Contacts.xcdatamodel */;
+			path = Contacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8CF39A35199ACCA200603EF4 /* Project object */;
 }

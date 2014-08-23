@@ -24,6 +24,7 @@
 
 @property (strong) id<LOLContactFormViewControllerDelegate> delegate;
 @property (strong) LOLContact *contact;
+@property (weak, nonatomic) NSManagedObjectContext *context;
 
 - (id) initWithContact:(LOLContact *)contact;
 - (IBAction)selectPhoto:(id)sender;

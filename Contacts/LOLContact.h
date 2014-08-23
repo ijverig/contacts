@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface LOLContact : NSObject <NSCoding, MKAnnotation>
+@interface LOLContact : NSManagedObject <NSCoding, MKAnnotation>
 
 @property (strong) NSString *name;
 @property (strong) NSString *email;

@@ -10,6 +10,8 @@
 
 @implementation LOLContact
 
+@dynamic name, email, address, phone, site, photo, latitude, longitude;
+
 - (NSString *)description
 {
     NSString *data = [NSString stringWithFormat:@"Name: %@ Email %@ Address: %@ Phone: %@ Site %@",

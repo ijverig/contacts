@@ -81,7 +81,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        LOLContact *contact = self.contacts[indexPath.row];
         [self.contacts removeObjectAtIndex:indexPath.row];
+        [self.context deleteObject:contact];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
@@ -100,6 +103,7 @@
 {
     LOLContactFormViewController *form = [LOLContactFormViewController new];
     form.delegate = self;
+    form.context = self.context;
     
     [self.navigationController pushViewController:form animated:YES];
 }

@@ -97,7 +97,7 @@
 - (void)fetchDataFromForm
 {
     if (!self.contact) {
-        self.contact = [LOLContact new];
+        self.contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:self.context];
     }
     
     self.contact.name = self.nameField.text;
