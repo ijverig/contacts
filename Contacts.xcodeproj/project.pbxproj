@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8CB1522719A6C12D003E39C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1522619A6C12D003E39C1 /* CoreLocation.framework */; };
 		8CB36D6D199C2033005804C4 /* LOLContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */; };
+		8CBA2C8619ABEF0C00596C13 /* LOLContactCityWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA2C8419ABEF0C00596C13 /* LOLContactCityWeatherViewController.m */; };
+		8CBA2C8719ABEF0C00596C13 /* LOLContactCityWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA2C8519ABEF0C00596C13 /* LOLContactCityWeatherViewController.xib */; };
 		8CBA8F2019A5696B0056C5DD /* LOLContactOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */; };
 		8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */; };
 		8CBA8F2319A56A1D0056C5DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBA8F2219A56A1D0056C5DD /* MapKit.framework */; };
@@ -48,6 +50,9 @@
 		8CB1522619A6C12D003E39C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CB36D6B199C2033005804C4 /* LOLContactsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactsListViewController.h; sourceTree = "<group>"; };
 		8CB36D6C199C2033005804C4 /* LOLContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactsListViewController.m; sourceTree = "<group>"; };
+		8CBA2C8319ABEF0C00596C13 /* LOLContactCityWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactCityWeatherViewController.h; sourceTree = "<group>"; };
+		8CBA2C8419ABEF0C00596C13 /* LOLContactCityWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactCityWeatherViewController.m; sourceTree = "<group>"; };
+		8CBA2C8519ABEF0C00596C13 /* LOLContactCityWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactCityWeatherViewController.xib; sourceTree = "<group>"; };
 		8CBA8F1D19A5696B0056C5DD /* LOLContactOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOLContactOnMapViewController.h; sourceTree = "<group>"; };
 		8CBA8F1E19A5696B0056C5DD /* LOLContactOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOLContactOnMapViewController.m; sourceTree = "<group>"; };
 		8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LOLContactOnMapViewController.xib; sourceTree = "<group>"; };
@@ -164,6 +169,9 @@
 				8CBA8F1F19A5696B0056C5DD /* LOLContactOnMapViewController.xib */,
 				8CF39A4F199ACCA200603EF4 /* LOLAppDelegate.h */,
 				8CF39A50199ACCA200603EF4 /* LOLAppDelegate.m */,
+				8CBA2C8319ABEF0C00596C13 /* LOLContactCityWeatherViewController.h */,
+				8CBA2C8419ABEF0C00596C13 /* LOLContactCityWeatherViewController.m */,
+				8CBA2C8519ABEF0C00596C13 /* LOLContactCityWeatherViewController.xib */,
 				8CF39A52199ACCA200603EF4 /* Images.xcassets */,
 				8CF39A47199ACCA200603EF4 /* Supporting Files */,
 			);
@@ -280,6 +288,7 @@
 			files = (
 				8CF39A4B199ACCA200603EF4 /* InfoPlist.strings in Resources */,
 				8CBA8F2619A56F380056C5DD /* Vila Mariana.gpx in Resources */,
+				8CBA2C8719ABEF0C00596C13 /* LOLContactCityWeatherViewController.xib in Resources */,
 				8CBA8F2119A5696B0056C5DD /* LOLContactOnMapViewController.xib in Resources */,
 				8CF39A53199ACCA200603EF4 /* Images.xcassets in Resources */,
 				8CF39A73199ACF8100603EF4 /* LOLContactFormViewController.xib in Resources */,
@@ -336,6 +345,7 @@
 			files = (
 				8CF39A72199ACF8100603EF4 /* LOLContactFormViewController.m in Sources */,
 				8CBA8F2019A5696B0056C5DD /* LOLContactOnMapViewController.m in Sources */,
+				8CBA2C8619ABEF0C00596C13 /* LOLContactCityWeatherViewController.m in Sources */,
 				8CF39A51199ACCA200603EF4 /* LOLAppDelegate.m in Sources */,
 				8CF39A76199AE29B00603EF4 /* LOLContact.m in Sources */,
 				8CF39A4D199ACCA200603EF4 /* main.m in Sources */,

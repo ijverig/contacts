@@ -3,6 +3,7 @@
 
 target "Contacts" do
   pod 'TPKeyboardAvoiding', '~> 1.2.4'
+  pod 'AFNetworking', '~> 2.3'
 end
 
 target "ContactsTests" do

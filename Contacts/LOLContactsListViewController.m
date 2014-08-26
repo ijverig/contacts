@@ -8,6 +8,7 @@
 
 #import "LOLContactsListViewController.h"
 #import "LOLContactFormViewController.h"
+#import "LOLContactCityWeatherViewController.h"
 
 @implementation LOLContactsListViewController
 
@@ -126,7 +127,7 @@
         NSIndexPath *index_path = [self.tableView indexPathForRowAtPoint:point];
         self.selectedContact = self.contacts[index_path.row];
         
-        UIActionSheet *options = [[UIActionSheet alloc] initWithTitle:self.selectedContact.name delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send email", @"Open site", @"Open map", nil];
+        UIActionSheet *options = [[UIActionSheet alloc] initWithTitle:self.selectedContact.name delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send email", @"Open site", @"Open map", @"Local weater", nil];
         [options showInView:self.view];
     }
 }
@@ -145,6 +146,9 @@
             break;
         case 3:
             [self openMap];
+            break;
+        case 4:
+            [self openLocalWeater];
             break;
         default:
             break;
@@ -184,6 +188,13 @@
 {
     NSString *url = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", self.selectedContact.address] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self openApplicationWithURL:url];
+}
+
+-(void)openLocalWeater
+{
+    LOLContactCityWeatherViewController *weather = [LOLContactCityWeatherViewController new];
+    weather.contact = self.selectedContact;
+    [self.navigationController pushViewController:weather animated:YES];
 }
 
 -(void)openApplicationWithURL:(NSString *)url
