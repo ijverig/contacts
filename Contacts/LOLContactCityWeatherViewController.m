@@ -15,6 +15,7 @@
 @implementation LOLContactCityWeatherViewController
 
 static NSString const *BASE_URL = @"http://api.openweathermap.org/data/2.5/weather?";
+static NSString const *BASE_URL_IMAGE = @"http://openweathermap.org/img/w/";
 
 - (id)init
 {
@@ -52,7 +53,10 @@ static NSString const *BASE_URL = @"http://api.openweathermap.org/data/2.5/weath
         self.minTemperatureLabel.text = [main[@"temp_min"] stringValue];
         self.maxTemperatureLabel.text = [main[@"temp_max"] stringValue];
         self.conditionLabel.text = weather[@"main"];
-    } failure:nil];
+        [self fetchImage: weather[@"icon"]];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
     [operation start];
 }
 
@@ -60,6 +64,18 @@ static NSString const *BASE_URL = @"http://api.openweathermap.org/data/2.5/weath
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)fetchImage:(NSString *)iconCode
+{
+    NSString *iconURL = [NSString stringWithFormat:@"%@%@.png", BASE_URL_IMAGE, iconCode];
+    NSURL *url = [NSURL URLWithString:iconURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.iconWeatherImage setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        self.iconWeatherImage.image = image;
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end
